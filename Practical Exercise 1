@@ -1,0 +1,50 @@
+student_name = input("Enter student name: ")
+registration_number = int(input("Enter your registration number: "))
+age = int(input("Enter your age: "))
+average = float(input("Enter your average score: "))
+registration_status = input("Enter your registration status (active/inactive): ")
+
+print("Student name:", student_name, type(student_name))
+print("Registration number:", registration_number, type(registration_number))
+print("Age:", age, type(age))
+print("Average mark:", average, type(average))
+print("Registration status:", registration_status, type(registration_status))
+
+english_marks = float(input("Enter your English marks: "))
+chemistry_marks = float(input("Enter your Chemistry marks: "))
+geography_marks = float(input("Enter your Geography marks: "))
+
+total_marks = english_marks + chemistry_marks + geography_marks
+average_marks = total_marks / 3
+pass_mark = 55
+meets_pass_condition = (english_marks >= pass_mark) and (chemistry_marks >= pass_mark) and (geography_marks >= pass_mark)
+print("Total marks:", total_marks)
+print("Average marks:", average_marks)
+print("Meets pass condition:", meets_pass_condition)
+
+marks = [88, 68, 100, 94, 86]
+for mark in marks:
+    loop_total = sum(marks)
+    loop_average = loop_total / len(marks)
+    print("Loop total:", loop_total)
+print("Loop average:", loop_average)
+
+def calculate_average(marks):
+    average = sum(marks) / len(marks)
+    return average
+
+def classify_result(average):
+    if average >= 87:
+        return "Distinction"
+    elif average >= 75:
+        return "Pass"
+    else:
+        return "Fail"
+
+marks = [77, 93, 88]
+average = calculate_average(marks)
+result = classify_result(average)
+
+print("Average:", average)
+print("Result:", result)
+
